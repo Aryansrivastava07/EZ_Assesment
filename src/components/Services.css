@@ -1,0 +1,238 @@
+.services {
+  min-height: 100vh;
+  padding: 80px 0;
+  position: relative;
+}
+
+.services-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.services-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brush-stroke {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 30px;
+}
+
+.brush-stroke svg {
+  width: 100%;
+  height: 100%;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  position: relative;
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:nth-child(2) {
+  transform: rotate(2deg);
+  margin-top: 40px;
+}
+
+.service-card:nth-child(3) {
+  transform: rotate(-1deg);
+}
+
+.service-card:hover {
+  transform: rotate(0deg) translateY(-10px);
+  z-index: 10;
+}
+
+.service-card-highlight {
+  border: 3px solid #ff6b4a;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.polaroid {
+  background: white;
+  padding: 15px 15px 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.polaroid-image {
+  width: 100%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.polaroid-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.polaroid-caption {
+  padding: 20px 10px 0;
+  text-align: center;
+}
+
+.polaroid-caption p {
+  font-family: 'Kalam', cursive;
+  font-size: 22px;
+  color: #2c2c2c;
+  margin: 0;
+}
+
+.tape {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  background: rgba(255, 248, 220, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tape-left {
+  top: -15px;
+  left: 20px;
+  transform: rotate(-45deg);
+}
+
+.tape-right {
+  top: -15px;
+  right: 20px;
+  transform: rotate(45deg);
+}
+
+.decorative-border-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: repeating-linear-gradient(
+    90deg,
+    #f4a89d 0px,
+    #f4a89d 15px,
+    transparent 15px,
+    transparent 30px
+  );
+  -webkit-mask-image: radial-gradient(circle at 50% 100%, transparent 12px, black 13px);
+  mask-image: radial-gradient(circle at 50% 100%, transparent 12px, black 13px);
+  -webkit-mask-size: 30px 25px;
+  mask-size: 30px 25px;
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .services-container {
+    padding: 0 40px;
+  }
+
+  .services-title {
+    font-size: 36px;
+  }
+
+  .services-grid {
+    gap: 40px;
+  }
+
+  .polaroid-caption p {
+    font-size: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 0;
+  }
+
+  .services-container {
+    padding: 0 30px;
+  }
+
+  .services-header {
+    margin-bottom: 50px;
+  }
+
+  .services-title {
+    font-size: 28px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    max-width: 400px;
+  }
+
+  .service-card:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .polaroid-caption p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+    padding: 0 20px;
+  }
+
+  .services-title {
+    font-size: 24px;
+  }
+
+  .services-grid {
+    max-width: 300px;
+  }
+
+  .polaroid {
+    padding: 12px 12px 40px;
+  }
+
+  .polaroid-caption p {
+    font-size: 16px;
+  }
+
+  .tape {
+    width: 60px;
+    height: 25px;
+  }
+}
+
+/* iPad Pro */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .services-container {
+    max-width: 1200px;
+  }
+
+  .services-grid {
+    max-width: 1000px;
+  }
+}

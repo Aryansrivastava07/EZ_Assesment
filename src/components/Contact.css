@@ -1,0 +1,397 @@
+.contact {
+  min-height: 100vh;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f5e6e8 0%, #fef5f6 100%);
+  position: relative;
+}
+
+.contact-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact-left {
+  position: relative;
+}
+
+.mandala-decoration {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.mandala-decoration svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-info {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-title {
+  font-family: 'Kalam', cursive;
+  font-size: 48px;
+  color: #2c2c2c;
+  margin-bottom: 15px;
+}
+
+.contact-subtitle {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  color: #4a4a4a;
+  margin-bottom: 40px;
+}
+
+.brand-icons {
+  margin: 40px 0;
+}
+
+.icon-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+.icon::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+}
+
+.icon-film::after {
+  content: '🎬';
+  position: absolute;
+  font-size: 24px;
+}
+
+.icon-brand::after {
+  content: '🎨';
+  position: absolute;
+  font-size: 24px;
+}
+
+.icon-art::after {
+  content: '🖼️';
+  position: absolute;
+  font-size: 24px;
+}
+
+.contact-details {
+  margin-top: 40px;
+}
+
+.detail-text {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-link {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  color: #ff4d4d;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #ff6b4a;
+  text-decoration: underline;
+}
+
+.contact-right {
+  background: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 14px;
+  color: #2c2c2c;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+  background: white;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #ff4d4d;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 13px;
+  font-family: 'Libre Baskerville', serif;
+  margin-top: -5px;
+}
+
+.success-message {
+  background: #4ade80;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 6px;
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 600;
+  animation: slideIn 0.3s ease;
+}
+
+.error-message-box {
+  background: #ff4d4d;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 6px;
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 600;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #ff6b4a, #ff4d4d);
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-self: flex-start;
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 77, 77, 0.4);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.decorative-border-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: repeating-linear-gradient(
+    90deg,
+    #f4a89d 0px,
+    #f4a89d 15px,
+    transparent 15px,
+    transparent 30px
+  );
+  -webkit-mask-image: radial-gradient(circle at 50% 100%, transparent 12px, black 13px);
+  mask-image: radial-gradient(circle at 50% 100%, transparent 12px, black 13px);
+  -webkit-mask-size: 30px 25px;
+  mask-size: 30px 25px;
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .contact-container {
+    padding: 0 40px;
+    gap: 50px;
+  }
+
+  .contact-right {
+    padding: 40px;
+  }
+
+  .contact-title {
+    font-size: 40px;
+  }
+
+  .mandala-decoration {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 30px;
+  }
+
+  .contact-right {
+    padding: 30px;
+  }
+
+  .contact-title {
+    font-size: 36px;
+  }
+
+  .contact-subtitle {
+    font-size: 16px;
+  }
+
+  .mandala-decoration {
+    width: 200px;
+    height: 200px;
+    top: -30px;
+    right: -30px;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon::before {
+    width: 25px;
+    height: 25px;
+  }
+
+  .icon-film::after,
+  .icon-brand::after,
+  .icon-art::after {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 0 20px;
+  }
+
+  .contact-right {
+    padding: 25px;
+  }
+
+  .contact-title {
+    font-size: 30px;
+  }
+
+  .contact-subtitle {
+    font-size: 14px;
+  }
+
+  .detail-text {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .submit-button {
+    width: 100%;
+    align-self: stretch;
+  }
+
+  .mandala-decoration {
+    width: 150px;
+    height: 150px;
+    top: -20px;
+    right: -20px;
+  }
+}
+
+/* iPad Pro */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .contact-container {
+    max-width: 1200px;
+  }
+}
+
+/* MacBook */
+@media (min-width: 1367px) and (max-width: 1440px) {
+  .contact-container {
+    max-width: 1400px;
+  }
+}
